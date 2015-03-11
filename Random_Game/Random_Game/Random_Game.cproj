@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.1</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{85dee9c5-a7e0-4f11-a739-91fbba6660b4}</ProjectGuid>
+    <avrdevice>ATmega128</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Random_Game</AssemblyName>
+    <Name>Random_Game</Name>
+    <RootNamespace>Random_Game</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfVersion>2.11.1</AsfVersion>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <BootSegment>2</BootSegment>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.3.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="buart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="buart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Random_Game.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="seg_7.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="seg_7.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="set_rand_diodes.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="set_rand_diodes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="init_mcu.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="init_mcu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Random_Game.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scan_but.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="scan_but.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="get_rand_1_12.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="get_rand_1_12.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
