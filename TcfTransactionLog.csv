@@ -1,3 +1,5 @@
-Service , Message , Max , Min , Average , Count , frequency , TimedOut
-
-Stream,setLogBits,78.125,78.125,78.125,1,0
+Service;0;Message;0;Max;0;Min;0;Average;0;Count;0;frequency;0;TimedOut
+;;;;;;;;;;;;;;
+Stream,setLogBits,78.125,78.125,78.125,1,0;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+xxx;;;;;;;;;;;;;;
